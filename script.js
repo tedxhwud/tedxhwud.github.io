@@ -3,8 +3,8 @@
 document.documentElement.classList.add('js');
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Event starts Thursday, April 8, 2027 at 09:00 Gulf Standard Time (UTC+4).
-  var eventDate = new Date('2027-04-08T09:00:00+04:00').getTime();
+  // Event starts Thursday, April 8, 2027 at 12:00 PM Gulf Standard Time (UTC+4).
+  var eventDate = new Date('2027-04-08T12:00:00+04:00').getTime();
   var countdown = document.getElementById('countdown');
   var countdownStatus = document.getElementById('countdown-status');
 
@@ -32,12 +32,24 @@ document.addEventListener('DOMContentLoaded', function () {
       ['days', 'hours', 'mins', 'secs'].forEach(function (unit) {
         setCountdownValue(els[unit], '00');
       });
-      countdown.classList.add('is-live');
-      countdown.setAttribute('aria-label', 'TEDxHeriot-Watt University Dubai is happening today');
-      if (countdownStatus) countdownStatus.textContent = 'Event day — see you there';
+      var eventIsToday = diff > -24 * 60 * 60 * 1000;
+      countdown.classList.toggle('is-live', eventIsToday);
+      countdown.classList.toggle('is-ended', !eventIsToday);
+      countdown.setAttribute(
+        'aria-label',
+        eventIsToday
+          ? 'TEDxHeriot-Watt University Dubai is happening today'
+          : 'TEDxHeriot-Watt University Dubai has ended'
+      );
+      if (countdownStatus) {
+        countdownStatus.textContent = eventIsToday
+          ? 'Event day — see you there'
+          : 'This event has ended';
+      }
       return;
     }
 
+    countdown.classList.remove('is-live', 'is-ended');
     var days = Math.floor(diff / (1000 * 60 * 60 * 24));
     var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
