@@ -1,14 +1,15 @@
-# TEDxHeriotWattUniversityDubai — Event Website
+# TEDxHeriot-Watt University Dubai — Event Website
 
-A single-page site for TEDxHeriotWattUniversityDubai (April 8, 2026), built for GitHub Pages.
+A single-page site for TEDxHeriot-Watt University Dubai (Thursday, April 8, 2027), built for GitHub Pages.
 Colors follow TEDx brand guidelines (red / black / white only). Theme, speakers, and venue
 details are marked "TBA" as placeholders — swap them in as they're confirmed.
 
 ## Files
 - `index.html` — page content/structure
 - `styles.css` — all styling (TEDx red `#EB0028`, black, white)
-- `script.js` — live countdown to April 8, 2026 + mobile menu toggle
+- `script.js` — live countdown to April 8, 2027 at 9:00 AM GST + mobile menu toggle and motion effects
 - `images/hwud.jpg` — Heriot-Watt University Dubai campus photo (hero + venue section)
+- `images/organizers/` — future organizer profile photos
 
 ## Publish it on GitHub Pages (using the `tedxhwud` account)
 
@@ -42,6 +43,7 @@ GitHub auto-publishes any repo named `<username>.github.io` to that URL. Same pa
 - **Theme reveal**: edit the `theme-title` (`xxx`) and `theme-sub` text in `index.html` under `<section id="theme">`.
 - **Speakers**: duplicate a `.speaker-card` block in the `speaker-grid` and replace the placeholder photo `div` with an `<img>` tag once headshots are ready.
 - **Venue/contact details**: edit the `<section id="venue">` and `<section id="organize">` blocks (address, email, ticket links).
-- **Countdown target time**: change the date string at the top of `script.js` if the exact start time changes.
+- **Organizer photos**: add photos to `images/organizers/`, then replace the matching placeholder in `<section id="organize">` with an `<img>` tag.
+- **Countdown target time**: change the ISO date string at the top of `script.js` if the exact start time changes.
 
 Any edit can be made directly in the GitHub web editor (pencil icon on each file) — changes go live automatically within a minute or two of committing.
