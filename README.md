@@ -8,7 +8,7 @@ details are marked "TBA" as placeholders — swap them in as they're confirmed.
 - `index.html` — page content/structure
 - `styles.css` — all styling (TEDx red `#EB0028`, black, white)
 - `script.js` — live countdown to April 8, 2027 at 12:00 PM GST + mobile menu toggle and motion effects
-- `images/favicon-16x16.png` — transparent TEDx logo used for the browser tab
+- `images/favicon-tab.png` — square transparent browser-tab version of the original TEDx logo
 - `images/hwud.jpg` — Heriot-Watt University Dubai campus photo (hero + venue section)
 - `images/organizers/` — future organizer profile photos
 
