@@ -42,7 +42,7 @@ GitHub auto-publishes any repo named `<username>.github.io` to that URL. Same pa
 ## Updating content later
 - **Theme reveal**: edit the `theme-title` (`xxx`) and `theme-sub` text in `index.html` under `<section id="theme">`.
 - **Speakers**: duplicate a `.speaker-card` block in the `speaker-grid` and replace the placeholder photo `div` with an `<img>` tag once headshots are ready.
-- **Deadlines**: edit the rows in `<section id="deadlines">` when application or event milestones change.
+- **Deadlines**: edit the timeline entries in `<section id="deadlines">` when application or event milestones change.
 - **Venue/contact details**: edit the `<section id="venue">` and `<section id="organize">` blocks (address, email, ticket links).
 - **Organizer photos**: keep organizer portraits in `images/organizers/` and reference them in the matching `.organizer-photo` frame in `<section id="organize">`. Current files are `Isaias PHOTO.jpg`, `ProfAbrar.webp`, and `ProfAdrian.jpeg`.
 - **Countdown target time**: update the `Date.UTC` target in `script.js` if the exact start time changes.
