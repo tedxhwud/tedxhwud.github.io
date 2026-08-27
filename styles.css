@@ -271,7 +271,7 @@ h2{ font-size: clamp(1.9rem, 3.4vw, 2.8rem); font-weight: 800; margin-bottom: 20
 }
 .organizer-card:hover::before{ width:100%; }
 .organizer-photo{
-  aspect-ratio:1/1.08; margin-bottom:0; background:
+  aspect-ratio:3/4; margin-bottom:0; background:
     radial-gradient(circle at 70% 22%, rgba(235,0,40,0.24) 0 2%, transparent 2.5%),
     linear-gradient(145deg, #292929 0%, #151515 100%);
   border:0; position:relative; display:flex; align-items:center; justify-content:center; overflow:hidden;
@@ -294,7 +294,7 @@ h2{ font-size: clamp(1.9rem, 3.4vw, 2.8rem); font-weight: 800; margin-bottom: 20
   letter-spacing:0.14em; text-transform:uppercase; margin:0 0 17px;
 }
 .organizer-info a{
-  display:block; color:#bbb; font-size:0.9rem; line-height:1.6;
+  display:block; color:#bbb; font-size:0.9rem; line-height:1.6; overflow-wrap:anywhere;
   transition:color 0.2s ease;
 }
 .organizer-info a:hover{ color:var(--white); }
@@ -335,9 +335,9 @@ h2{ font-size: clamp(1.9rem, 3.4vw, 2.8rem); font-weight: 800; margin-bottom: 20
   .countdown-unit{ width: 70px; height: 70px; }
   .section{ padding: 74px 0; }
   .theme-section{ padding: 90px 0; }
-  .organizer-grid{ grid-template-columns:1fr; max-width:440px; margin-left:auto; margin-right:auto; gap:20px; }
+  .organizer-grid{ grid-template-columns:repeat(2, minmax(0, 1fr)); max-width:none; gap:14px; }
   .organizer-card{ padding:10px; }
-  .organizer-info{ padding:22px 14px 18px; }
+  .organizer-info{ padding:18px 8px 16px; }
 }
 
 @media (max-width: 520px){
@@ -348,6 +348,10 @@ h2{ font-size: clamp(1.9rem, 3.4vw, 2.8rem); font-weight: 800; margin-bottom: 20
   .countdown{ gap:10px; }
   .countdown-unit{ width:calc((100vw - 70px) / 4); min-width:0; }
   .countdown-status{ font-size:0.66rem; }
+  .organizer-grid{ gap:18px; }
+  .organizer-info h3{ font-size:1rem; }
+  .organizer-role{ font-size:0.72rem; }
+  .organizer-info a{ font-size:0.76rem; }
 }
 
 @keyframes hero-drift{
