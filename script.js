@@ -5,10 +5,10 @@ document.documentElement.classList.add('js');
 document.addEventListener('DOMContentLoaded', function () {
   // Event starts Thursday, April 8, 2027 at 12:00 PM Gulf Standard Time (UTC+4).
   var countdown = document.getElementById('countdown');
-  var eventDate = new Date(
-    countdown ? countdown.getAttribute('data-event-date') : '2027-04-08T12:00:00+04:00'
-  ).getTime();
+  // Date.UTC keeps the target unambiguous in every browser and timezone.
+  var eventDate = Date.UTC(2027, 3, 8, 8, 0, 0);
   var countdownStatus = document.getElementById('countdown-status');
+  var launchCode = document.getElementById('launch-code');
 
   var els = {
     days: document.getElementById('cd-days'),
@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
           ? 'Event day — see you there'
           : 'This event has ended';
       }
+      if (launchCode) launchCode.textContent = eventIsToday ? 'T− LIVE' : 'EVENT COMPLETE';
       return;
     }
 
@@ -57,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     var secs = Math.floor((diff % (1000 * 60)) / 1000);
 
+    if (launchCode) launchCode.textContent = 'T− ' + days + ' DAYS';
     setCountdownValue(els.days, pad(days));
     setCountdownValue(els.hours, pad(hours));
     setCountdownValue(els.mins, pad(mins));
