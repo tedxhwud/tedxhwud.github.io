@@ -249,6 +249,37 @@ h2{ font-size: clamp(1.9rem, 3.4vw, 2.8rem); font-weight: 800; margin-bottom: 20
 .speaker-card h3{ font-size: 1.15rem; font-weight: 700; margin-bottom: 4px; }
 .speaker-role{ font-size: 0.92rem; color: #666; margin:0; }
 
+/* Deadlines */
+.deadlines-section{ background:var(--off-white); }
+.deadline-table-wrap{
+  margin-top:48px; border-top:2px solid var(--black); overflow-x:auto;
+}
+.deadline-table{
+  width:100%; border-collapse:collapse; table-layout:fixed;
+}
+.deadline-table th, .deadline-table td{
+  padding:25px 24px; border-bottom:1px solid var(--line-dark); text-align:left;
+  vertical-align:middle;
+}
+.deadline-table thead th{
+  padding-top:17px; padding-bottom:17px; color:#666; font-family:var(--font-display);
+  font-size:0.78rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase;
+}
+.deadline-table thead th:first-child{ width:36%; }
+.deadline-table tbody th{
+  font-family:var(--font-display); font-size:1.2rem; font-weight:700; line-height:1.15;
+}
+.deadline-table tbody td{ font-size:1.05rem; line-height:1.45; }
+.deadline-table tbody tr{ transition:background 0.25s ease, transform 0.25s ease; }
+.deadline-table tbody tr:hover{ background:rgba(255,255,255,0.7); }
+.deadline-stage{ color:var(--red); font-family:var(--font-display); font-weight:700; }
+.deadline-event th, .deadline-event td{ color:var(--red); }
+.deadline-event th{ position:relative; }
+.deadline-event th::before{
+  content:""; display:inline-block; width:8px; height:8px; margin:0 10px 2px 0;
+  background:var(--red); border-radius:50%;
+}
+
 /* Venue */
 .venue-section{ background: var(--off-white); }
 .col-media img{ border: 1px solid var(--line-dark); }
@@ -351,6 +382,10 @@ h2{ font-size: clamp(1.9rem, 3.4vw, 2.8rem); font-weight: 800; margin-bottom: 20
   .countdown-unit{ width: 70px; height: 70px; }
   .section{ padding: 74px 0; }
   .theme-section{ padding: 90px 0; }
+  .deadline-table th, .deadline-table td{ padding:20px 14px; }
+  .deadline-table thead th:first-child{ width:42%; }
+  .deadline-table tbody th{ font-size:1.05rem; }
+  .deadline-table tbody td{ font-size:0.95rem; }
   .organizer-grid{ grid-template-columns:repeat(2, minmax(0, 1fr)); max-width:none; gap:14px; }
   .organizer-card{ padding:10px; }
   .organizer-info{ padding:18px 8px 16px; }
@@ -366,6 +401,10 @@ h2{ font-size: clamp(1.9rem, 3.4vw, 2.8rem); font-weight: 800; margin-bottom: 20
   .countdown{ gap:10px; }
   .countdown-unit{ width:calc((100vw - 70px) / 4); min-width:0; }
   .countdown-status{ font-size:0.66rem; }
+  .deadline-table th, .deadline-table td{ padding:18px 10px; }
+  .deadline-table thead th{ font-size:0.68rem; letter-spacing:0.08em; }
+  .deadline-table tbody th{ font-size:0.9rem; }
+  .deadline-table tbody td{ font-size:0.85rem; }
   .organizer-grid{ gap:18px; }
   .organizer-info h3{ font-size:1rem; }
   .organizer-role{ font-size:0.72rem; }
