@@ -43,7 +43,7 @@ GitHub auto-publishes any repo named `<username>.github.io` to that URL. Same pa
 - **Theme reveal**: edit the `theme-title` (`xxx`) and `theme-sub` text in `index.html` under `<section id="theme">`.
 - **Speakers**: duplicate a `.speaker-card` block in the `speaker-grid` and replace the placeholder photo `div` with an `<img>` tag once headshots are ready.
 - **Venue/contact details**: edit the `<section id="venue">` and `<section id="organize">` blocks (address, email, ticket links).
-- **Organizer photos**: add photos to `images/organizers/`, then replace the matching placeholder in `<section id="organize">` with an `<img>` tag.
+- **Organizer photos**: keep organizer portraits in `images/organizers/` and reference them in the matching `.organizer-photo` frame in `<section id="organize">`. Current files are `Isaias PHOTO.jpg`, `ProfAbrar.webp`, and `ProfAdrian.jpeg`.
 - **Countdown target time**: update the `Date.UTC` target in `script.js` if the exact start time changes.
 
 Any edit can be made directly in the GitHub web editor (pencil icon on each file) — changes go live automatically within a minute or two of committing.
