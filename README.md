@@ -44,7 +44,7 @@ GitHub auto-publishes any repo named `<username>.github.io` to that URL. Same pa
 - **Theme reveal**: edit the `theme-title` (`xxx`) and `theme-sub` text in `index.html` under `<section id="theme">`.
 - **Speakers**: duplicate a `.speaker-card` block in the `speaker-grid` and replace the placeholder photo `div` with an `<img>` tag once headshots are ready.
 - **Deadlines**: edit the timeline entries in `<section id="deadlines">` when application or event milestones change.
-- **Venue/contact details & socials**: edit the `<section id="venue">` and `<section id="organize">` blocks (address, email `tedxhwud@gmail.com`, Instagram `@tedxhwud`, LinkedIn page, ticket links).
+- **Venue, organizers & contact details**: edit the `<section id="venue">`, `<section id="organize">`, and `<section id="contact">` blocks (address, organizer profiles, email `tedxhwud@gmail.com`, Instagram @tedxhwud, LinkedIn page, ticket links).
 - **Organizer photos**: keep organizer portraits in `images/organizers/` and reference them in the matching `.organizer-photo` frame in `<section id="organize">`. Current files are `Isaias PHOTO.jpg`, `ProfAbrar.webp`, and `ProfAdrian.jpeg`.
 - **Countdown target time**: update the `Date.UTC` target in `script.js` if the exact start time changes.
 
