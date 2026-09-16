@@ -237,22 +237,27 @@ h2{ font-size: clamp(1.9rem, 3.4vw, 2.8rem); font-weight: 800; margin-bottom: 20
 }
 .theme-sub{
   font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.22em;
-  font-size: clamp(0.95rem, 2vw, 1.15rem); font-weight: 600; color: var(--white);
-  margin: 18px 0 0; text-align: center;
+  font-size: clamp(0.95rem, 2vw, 1.15rem); font-weight: 600;
+  color: #FFFFFF !important;
+  margin: 18px auto 0; text-align: justify; text-align-last: center;
+  max-width: 720px;
 }
 .theme-body{
   max-width: 720px; margin: 36px auto 0; padding-top: 32px;
   border-top: 1px solid rgba(255,255,255,0.12);
-  text-align: center;
+  text-align: justify;
 }
-.theme-lead{
+.theme-section .theme-lead,
+.theme-section p.theme-lead{
   font-size: clamp(1.1rem, 2.2vw, 1.28rem); line-height: 1.6;
-  color: var(--white); font-weight: 500; margin: 0 0 18px; max-width: none;
-  text-align: center;
+  color: #FFFFFF !important; font-weight: 500; margin: 0 0 18px; max-width: none;
+  text-align: justify;
 }
-.theme-note{
-  max-width: none; margin: 0; color: rgba(255,255,255,0.88); font-size: 1.02rem; line-height: 1.65;
-  text-align: center;
+.theme-section .theme-note,
+.theme-section p.theme-note{
+  max-width: none; margin: 0;
+  color: #FFFFFF !important; font-size: 1.02rem; line-height: 1.65;
+  text-align: justify;
 }
 .theme-social-link{
   color: var(--white);
