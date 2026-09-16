@@ -190,11 +190,20 @@ a:focus-visible, button:focus-visible{
 .hero-actions{
   display:flex; flex-wrap:wrap; align-items:center; gap: 14px;
 }
+.hero-actions .btn-primary,
+.hero-actions .btn-ghost{
+  min-width: 280px;
+  min-height: 54px;
+  padding: 15px 28px;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  box-sizing: border-box;
+}
 .btn-ghost{
   display:inline-flex; align-items:center; justify-content:center;
   color: var(--white); font-family: var(--font-display); font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.04em; padding: 13px 24px;
-  font-size: 0.92rem; border: 2px solid rgba(255,255,255,0.45);
+  text-transform: uppercase; letter-spacing: 0.04em; padding: 15px 28px;
+  font-size: 0.95rem; border: 2px solid rgba(255,255,255,0.45);
   transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
 }
 .btn-ghost:hover{
@@ -262,14 +271,17 @@ h2{ font-size: clamp(1.9rem, 3.4vw, 2.8rem); font-weight: 800; margin-bottom: 20
 .theme-box::after{ bottom:-3px; right:-3px; border-left:none; border-top:none; }
 .theme-title{
   font-size: clamp(3.6rem, 12vw, 8.5rem); font-weight: 900; color: var(--red);
-  letter-spacing: 0.06em; line-height: 0.95;
+  letter-spacing: 0.06em; line-height: 0.95; text-align: center;
 }
-.theme-sub{
+.theme-section .theme-sub,
+.theme-section p.theme-sub{
+  display: block;
+  width: 100%;
   font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.18em;
   font-size: clamp(1.2rem, 2.8vw, 1.65rem); font-weight: 700;
   color: #FFFFFF !important;
-  margin: 20px auto 0; text-align: center;
-  max-width: 720px;
+  margin: 20px 0 0;
+  text-align: center !important;
 }
 .theme-body{
   max-width: 720px; margin: 36px auto 0; padding-top: 32px;
@@ -566,8 +578,9 @@ h2{ font-size: clamp(1.9rem, 3.4vw, 2.8rem); font-weight: 800; margin-bottom: 20
   .theme-box{ padding: 48px 22px 44px; }
   .theme-body{ margin-top: 28px; padding-top: 24px; }
   .theme-section .theme-copy{ font-size: 0.98rem; }
-  .theme-sub{ font-size: 1.15rem; letter-spacing: 0.14em; }
-  .nav-apply{ align-self: flex-start; }
+  .theme-section .theme-sub{ font-size: 1.2rem; letter-spacing: 0.14em; }
+  .hero-actions .btn-primary,
+  .hero-actions .btn-ghost{ min-width: 100%; }
   .deadline-roadmap{ margin-top:34px; }
   .deadline-roadmap::before{ left:calc(34% + 8px); }
   .deadline-item{ grid-template-columns:34% 18px minmax(0, 1fr); gap:12px; }
