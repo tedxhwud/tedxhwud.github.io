@@ -277,10 +277,12 @@ h2{ font-size: clamp(1.9rem, 3.4vw, 2.8rem); font-weight: 800; margin-bottom: 20
 .theme-section p.theme-sub{
   display: block;
   width: 100%;
+  max-width: none !important;
   font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.18em;
   font-size: clamp(1.2rem, 2.8vw, 1.65rem); font-weight: 700;
   color: #FFFFFF !important;
-  margin: 20px 0 0;
+  margin: 20px auto 0 !important;
+  padding-left: 0.18em; /* offset trailing letter-spacing so it looks optically centered */
   text-align: center !important;
 }
 .theme-body{
