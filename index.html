@@ -9,16 +9,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=2027-theme-white">
+<link rel="stylesheet" href="styles.css?v=2027-apply-theme">
 </head>
 <body>
 
 <div class="noise-overlay" aria-hidden="true"></div>
+<div id="top" tabindex="-1"></div>
 
 <!-- NAV -->
-<header class="site-header" id="top">
+<header class="site-header">
   <div class="header-inner">
-    <a href="#top" class="wordmark" aria-label="TEDxHeriot-Watt University Dubai home">
+    <a href="#top" class="wordmark" id="wordmarkHome" aria-label="TEDxHeriot-Watt University Dubai home">
       <span class="ted">TED<span class="x">x</span></span><span class="event-name">Heriot-Watt University Dubai</span>
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
@@ -32,6 +33,7 @@
       <a href="#venue">Venue</a>
       <a href="#organize">Organizers</a>
       <a href="#contact">Contact</a>
+      <a class="nav-apply" href="https://forms.cloud.microsoft/e/EziYMqBeuY" target="_blank" rel="noopener noreferrer">Apply</a>
     </nav>
   </div>
 </header>
@@ -78,7 +80,10 @@
     </div>
     <p class="countdown-status" id="countdown-status">Counting down to 12:00 PM GST</p>
 
-    <a href="#theme" class="btn-primary">See what's confirmed so far ↓</a>
+    <div class="hero-actions">
+      <a href="https://forms.cloud.microsoft/e/EziYMqBeuY" class="btn-primary" target="_blank" rel="noopener noreferrer">Apply to speak ↗</a>
+      <a href="#theme" class="btn-ghost">See this year's theme ↓</a>
+    </div>
   </div>
 </section>
 
@@ -104,9 +109,11 @@
       <h2 class="theme-title">SKYWARD</h2>
       <p class="theme-sub">Where Possibility Rises</p>
       <div class="theme-body">
-        <p class="theme-lead">Looking beyond the familiar and asking what could come next. It celebrates ideas that challenge assumptions, shift perspectives, and open new directions for how we think, live, create, and solve problems.</p>
-        <p class="theme-note">The theme is intentionally broad and welcomes ideas from across disciplines, including technology, science, engineering, business, design, education, culture, the arts, society, and personal experience. Speakers do not need to talk literally about the future. Instead, we are looking for ideas with the potential to move thinking forward, reveal new possibilities, or help audiences see the world from a different point of view.</p>
+        <p class="theme-copy">The theme Skyward was chosen to evoke ambition, openness, and a sense of looking beyond present boundaries. It suggests upward movement and possibility, while remaining broad enough to be interpreted in many different ways.</p>
+        <p class="theme-copy">At its core, the theme is about exploring what could come next. We are interested in ideas that challenge assumptions, rethink familiar problems, reveal overlooked possibilities, or introduce new ways of understanding the world around us.</p>
+        <p class="theme-copy">The theme is intentionally multidisciplinary and welcomes speakers from technology, science, engineering, business, design, education, culture, the arts, society, and beyond. Talks do not need to be explicitly about the future; they simply need to offer an idea, perspective, or insight that takes the audience somewhere new.</p>
       </div>
+      <a class="btn-primary theme-apply" href="https://forms.cloud.microsoft/e/EziYMqBeuY" target="_blank" rel="noopener noreferrer">Apply with your idea ↗</a>
     </div>
   </div>
 </section>
@@ -160,6 +167,7 @@
         <div class="deadline-detail">
           <span class="deadline-stage">Stage 1</span>
           <h3>Call for speaker applications (forms) open</h3>
+          <a class="deadline-apply" href="https://forms.cloud.microsoft/e/EziYMqBeuY" target="_blank" rel="noopener noreferrer">Open application form ↗</a>
         </div>
       </article>
 
@@ -352,6 +360,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=20260827-0410" defer></script>
+<script src="script.js?v=20260916-apply" defer></script>
 </body>
 </html>

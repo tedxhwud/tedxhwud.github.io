@@ -70,22 +70,38 @@ a:focus-visible, button:focus-visible{
 }
 .site-header.scrolled{ background: rgba(10,10,10,0.94); box-shadow: 0 8px 24px rgba(0,0,0,0.18); }
 .header-inner{
-  max-width: var(--max-w); margin: 0 auto; padding: 14px 24px;
-  display:flex; align-items:center; justify-content:space-between;
+  max-width: var(--max-w); margin: 0 auto; padding: 12px 24px;
+  display:flex; align-items:center; justify-content:space-between; gap: 18px;
 }
 .wordmark{ color: var(--white); font-size: 1.15rem; display:flex; align-items:baseline; }
-.main-nav{ display:flex; gap: 28px; }
+.main-nav{ display:flex; align-items:center; gap: 22px; }
 .main-nav a{
   color: var(--white); font-family: var(--font-display); font-weight: 600;
-  text-transform: uppercase; font-size: 0.92rem; letter-spacing: 0.06em;
+  text-transform: uppercase; font-size: 0.88rem; letter-spacing: 0.06em;
   padding-bottom: 3px; border-bottom: 2px solid transparent;
-  transition: border-color 0.2s ease, color 0.2s ease;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
 }
 .main-nav a:hover{ border-color: var(--red); }
 .main-nav a.active{ color:var(--white); border-color:var(--red); }
+.main-nav a.nav-apply{
+  background: var(--red); color: var(--white);
+  border: 2px solid var(--red); border-bottom: 2px solid var(--red);
+  padding: 8px 16px; letter-spacing: 0.08em; font-size: 0.84rem;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.main-nav a.nav-apply:hover,
+.main-nav a.nav-apply.active{
+  background: transparent; color: var(--red); border-color: var(--red);
+}
 
 .nav-toggle{ display:none; background:none; border:none; cursor:pointer; padding: 6px; }
 .nav-toggle span{ display:block; width:24px; height:2px; background: var(--white); margin:5px 0; }
+
+#top{
+  position: absolute; top: 0; left: 0; width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+}
 
 /* ---------- Hero ---------- */
 .hero{
@@ -171,6 +187,19 @@ a:focus-visible, button:focus-visible{
 }
 .btn-primary:hover{ background: transparent; color: var(--red); }
 .btn-on-dark{ }
+.hero-actions{
+  display:flex; flex-wrap:wrap; align-items:center; gap: 14px;
+}
+.btn-ghost{
+  display:inline-flex; align-items:center; justify-content:center;
+  color: var(--white); font-family: var(--font-display); font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.04em; padding: 13px 24px;
+  font-size: 0.92rem; border: 2px solid rgba(255,255,255,0.45);
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+.btn-ghost:hover{
+  border-color: var(--white); background: rgba(255,255,255,0.08);
+}
 
 .btn-secondary{
   display:inline-block; margin-top: 8px; padding: 13px 26px;
@@ -236,10 +265,10 @@ h2{ font-size: clamp(1.9rem, 3.4vw, 2.8rem); font-weight: 800; margin-bottom: 20
   letter-spacing: 0.06em; line-height: 0.95;
 }
 .theme-sub{
-  font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.22em;
-  font-size: clamp(0.95rem, 2vw, 1.15rem); font-weight: 600;
+  font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.18em;
+  font-size: clamp(1.2rem, 2.8vw, 1.65rem); font-weight: 700;
   color: #FFFFFF !important;
-  margin: 18px auto 0; text-align: justify; text-align-last: center;
+  margin: 20px auto 0; text-align: center;
   max-width: 720px;
 }
 .theme-body{
@@ -247,17 +276,16 @@ h2{ font-size: clamp(1.9rem, 3.4vw, 2.8rem); font-weight: 800; margin-bottom: 20
   border-top: 1px solid rgba(255,255,255,0.12);
   text-align: justify;
 }
-.theme-section .theme-lead,
-.theme-section p.theme-lead{
-  font-size: clamp(1.1rem, 2.2vw, 1.28rem); line-height: 1.6;
-  color: #FFFFFF !important; font-weight: 500; margin: 0 0 18px; max-width: none;
+.theme-section .theme-copy,
+.theme-section p.theme-copy{
+  font-size: 1.05rem; line-height: 1.7;
+  color: #FFFFFF !important; font-weight: 400; margin: 0 0 18px; max-width: none;
   text-align: justify;
 }
-.theme-section .theme-note,
-.theme-section p.theme-note{
-  max-width: none; margin: 0;
-  color: #FFFFFF !important; font-size: 1.02rem; line-height: 1.65;
-  text-align: justify;
+.theme-section .theme-copy:last-child,
+.theme-section p.theme-copy:last-child{ margin-bottom: 0; }
+.theme-apply{
+  margin-top: 34px;
 }
 .theme-social-link{
   color: var(--white);
@@ -336,6 +364,14 @@ h2{ font-size: clamp(1.9rem, 3.4vw, 2.8rem); font-weight: 800; margin-bottom: 20
 .deadline-detail h3{
   font-size:1.3rem; line-height:1.15; font-weight:700;
 }
+.deadline-apply{
+  display:inline-flex; margin-top:14px;
+  color:var(--red); font-family:var(--font-display); font-size:0.84rem; font-weight:700;
+  letter-spacing:0.08em; text-transform:uppercase;
+  border-bottom:1px solid rgba(235,0,40,0.45); padding-bottom:2px;
+  transition:color 0.2s ease, border-color 0.2s ease;
+}
+.deadline-apply:hover{ color:var(--black); border-color:var(--black); }
 .deadline-detail p{
   margin:12px 0 0; color:#555; font-size:0.95rem; line-height:1.5; max-width:none;
 }
@@ -529,7 +565,9 @@ h2{ font-size: clamp(1.9rem, 3.4vw, 2.8rem); font-weight: 800; margin-bottom: 20
   .theme-section{ padding: 90px 0; }
   .theme-box{ padding: 48px 22px 44px; }
   .theme-body{ margin-top: 28px; padding-top: 24px; }
-  .theme-lead{ font-size: 1.05rem; }
+  .theme-section .theme-copy{ font-size: 0.98rem; }
+  .theme-sub{ font-size: 1.15rem; letter-spacing: 0.14em; }
+  .nav-apply{ align-self: flex-start; }
   .deadline-roadmap{ margin-top:34px; }
   .deadline-roadmap::before{ left:calc(34% + 8px); }
   .deadline-item{ grid-template-columns:34% 18px minmax(0, 1fr); gap:12px; }

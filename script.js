@@ -70,6 +70,17 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(updateCountdown, 1000);
   }
 
+  // ---- Wordmark scrolls to true page top ----
+  var wordmark = document.getElementById('wordmarkHome');
+  if (wordmark) {
+    wordmark.addEventListener('click', function (event) {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (history.replaceState) history.replaceState(null, '', '#top');
+      else window.location.hash = 'top';
+    });
+  }
+
   // ---- Mobile nav toggle ----
   var toggle = document.getElementById('navToggle');
   var nav = document.getElementById('mainNav');
@@ -96,7 +107,11 @@ document.addEventListener('DOMContentLoaded', function () {
   updateHeader();
   window.addEventListener('scroll', updateHeader, { passive: true });
 
-  var navLinks = nav ? Array.from(nav.querySelectorAll('a')) : [];
+  var navLinks = nav
+    ? Array.from(nav.querySelectorAll('a')).filter(function (link) {
+        return (link.getAttribute('href') || '').charAt(0) === '#';
+      })
+    : [];
   var sections = document.querySelectorAll('section[id]');
   if ('IntersectionObserver' in window && navLinks.length) {
     var sectionObserver = new IntersectionObserver(function (entries) {
