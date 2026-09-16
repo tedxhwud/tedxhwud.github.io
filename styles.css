@@ -211,10 +211,20 @@ h2{ font-size: clamp(1.9rem, 3.4vw, 2.8rem); font-weight: 800; margin-bottom: 20
 .theme-section{
   background: var(--black); color: var(--white); text-align:center;
   padding: 130px 0;
-}
-.theme-box{
-  border: 1px solid var(--line); padding: 70px 30px; margin-top: 10px;
   position: relative;
+  overflow: hidden;
+}
+.theme-section::before{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(ellipse 70% 45% at 50% 0%, rgba(235,0,40,0.14) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 50% 100%, rgba(255,255,255,0.04) 0%, transparent 65%);
+}
+.theme-section .section-inner{ position:relative; z-index:1; }
+.theme-box{
+  border: 1px solid var(--line); padding: 70px 40px 64px; margin-top: 10px;
+  position: relative;
+  background: rgba(255,255,255,0.02);
 }
 .theme-box::before, .theme-box::after{
   content:""; position:absolute; width: 26px; height: 26px; border: 3px solid var(--red);
@@ -222,14 +232,26 @@ h2{ font-size: clamp(1.9rem, 3.4vw, 2.8rem); font-weight: 800; margin-bottom: 20
 .theme-box::before{ top:-3px; left:-3px; border-right:none; border-bottom:none; }
 .theme-box::after{ bottom:-3px; right:-3px; border-left:none; border-top:none; }
 .theme-title{
-  font-size: clamp(4rem, 14vw, 9rem); font-weight: 900; color: var(--red);
-  letter-spacing: 0.05em; line-height: 1;
+  font-size: clamp(3.6rem, 12vw, 8.5rem); font-weight: 900; color: var(--red);
+  letter-spacing: 0.06em; line-height: 0.95;
 }
 .theme-sub{
-  font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.2em;
-  font-size: 1rem; font-weight: 600; color: var(--off-white); margin: 14px 0 30px;
+  font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.22em;
+  font-size: clamp(0.95rem, 2vw, 1.15rem); font-weight: 600; color: var(--off-white);
+  margin: 18px 0 0;
 }
-.theme-note{ max-width: 520px; margin: 0 auto; color: #aaa; }
+.theme-body{
+  max-width: 720px; margin: 36px auto 0; padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  text-align: left;
+}
+.theme-lead{
+  font-size: clamp(1.1rem, 2.2vw, 1.28rem); line-height: 1.6;
+  color: var(--off-white); font-weight: 500; margin: 0 0 18px; max-width: none;
+}
+.theme-note{
+  max-width: none; margin: 0; color: #aaa; font-size: 1.02rem; line-height: 1.65;
+}
 .theme-social-link{
   color: var(--white);
   border-bottom: 1px solid var(--red);
@@ -498,6 +520,9 @@ h2{ font-size: clamp(1.9rem, 3.4vw, 2.8rem); font-weight: 800; margin-bottom: 20
   .countdown-unit{ width: 70px; height: 70px; }
   .section{ padding: 74px 0; }
   .theme-section{ padding: 90px 0; }
+  .theme-box{ padding: 48px 22px 44px; }
+  .theme-body{ margin-top: 28px; padding-top: 24px; }
+  .theme-lead{ font-size: 1.05rem; }
   .deadline-roadmap{ margin-top:34px; }
   .deadline-roadmap::before{ left:calc(34% + 8px); }
   .deadline-item{ grid-template-columns:34% 18px minmax(0, 1fr); gap:12px; }

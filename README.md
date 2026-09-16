@@ -1,8 +1,8 @@
 # TEDxHeriot-Watt University Dubai — Event Website
 
 A single-page site for TEDxHeriot-Watt University Dubai (Thursday, April 8, 2027), built for GitHub Pages.
-Colors follow TEDx brand guidelines (red / black / white only). Theme, speakers, and venue
-details are marked "TBA" as placeholders — swap them in as they're confirmed.
+Colors follow TEDx brand guidelines (red / black / white only). Theme: **SKYWARD — Where Possibility Rises**.
+Speakers and some venue details are marked "TBA" as placeholders — swap them in as they're confirmed.
 
 ## Files
 - `index.html` — page content/structure
@@ -41,7 +41,7 @@ GitHub auto-publishes any repo named `<username>.github.io` to that URL. Same pa
    **https://tedxhwud.github.io**
 
 ## Updating content later
-- **Theme reveal**: edit the `theme-title` (`xxx`) and `theme-sub` text in `index.html` under `<section id="theme">`.
+- **Theme**: edit the `theme-title`, `theme-sub`, and description copy in `index.html` under `<section id="theme">`.
 - **Speakers**: duplicate a `.speaker-card` block in the `speaker-grid` and replace the placeholder photo `div` with an `<img>` tag once headshots are ready.
 - **Deadlines**: edit the timeline entries in `<section id="deadlines">` when application or event milestones change.
 - **Venue, organizers & contact details**: edit the `<section id="venue">`, `<section id="organize">`, and `<section id="contact">` blocks (address, organizer profiles, email `tedxhwud@gmail.com`, Instagram @tedxhwud, LinkedIn page, ticket links).
