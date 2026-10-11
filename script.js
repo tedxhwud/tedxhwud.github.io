@@ -3,10 +3,10 @@
 document.documentElement.classList.add('js');
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Event starts Thursday, April 8, 2027 at 12:00 PM Gulf Standard Time (UTC+4).
+  // Event starts Wednesday, April 7, 2027 at 12:00 PM Gulf Standard Time (UTC+4).
   var countdown = document.getElementById('countdown');
   // Date.UTC keeps the target unambiguous in every browser and timezone.
-  var eventDate = Date.UTC(2027, 3, 8, 8, 0, 0);
+  var eventDate = Date.UTC(2027, 3, 7, 8, 0, 0);
   var countdownStatus = document.getElementById('countdown-status');
   var launchCode = document.getElementById('launch-code');
 

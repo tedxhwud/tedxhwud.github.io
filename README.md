@@ -1,13 +1,13 @@
 # TEDxHeriot-Watt University Dubai — Event Website
 
-A single-page site for TEDxHeriot-Watt University Dubai (Thursday, April 8, 2027), built for GitHub Pages.
+A single-page site for TEDxHeriot-Watt University Dubai (Wednesday, April 7, 2027), built for GitHub Pages.
 Colors follow TEDx brand guidelines (red / black / white only). Theme: **SKYWARD — Where Possibility Rises**.
 Speakers and some venue details are marked "TBA" as placeholders — swap them in as they're confirmed.
 
 ## Files
 - `index.html` — page content/structure
 - `styles.css` — all styling (TEDx red `#EB0028`, black, white)
-- `script.js` — live countdown to April 8, 2027 at 12:00 PM GST + mobile menu toggle and motion effects
+- `script.js` — live countdown to April 7, 2027 at 12:00 PM GST + mobile menu toggle and motion effects
 - `images/favicon-tab.png` — square transparent browser-tab version of the original TEDx logo
 - `images/hwud.jpg` — Heriot-Watt University Dubai campus photo (hero + venue section)
 - `images/organizers/` — future organizer profile photos
